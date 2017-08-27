@@ -10,7 +10,106 @@
 	<link rel="stylesheet" href="css/main.css">
 <!-- 	<link rel="stylesheet" href="css/application.min.css"> -->
 </head>
+
 <body>
+
+<div id="top-wrap" class="flex column">
+	<header class="flex column center">
+		<img src="images/logo-200x200.svg" class="centerself">
+		<h1 class="centerself">Kylah Ellison</h1>
+		<p class="centerself">Lifelong learner and web developer</p>
+	</header>
+
+	<nav class="order1">
+		<div class="hamburger" onclick="clickBurger()">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div> 
+		</div>
+		<ul id="nav" class="column" style="display: none;">
+			<li><a href="#home">Home</a></li>
+	        <li><a href="#about">About</a></li>
+	        <li><a href="#portfolio">Portfolio</a></li>
+	        <li><a href="#contact">Contact</a></li>
+	    </ul>
+	</nav>
+</div>
+
+<main>
+<div id="main-wrap">
+
+	<div id="home" class="flex column center">
+		<h2 class="centerself">Some tagline here</h2>
+		<p class="centerself">My skillset includes:</p>
+		<ul class="flex wrap center skills">
+        	<li>HTML</li>
+        	<li>CSS</li>
+        	<li>JavaScript</li>
+        	<li>Jquery</li>
+        	<li>Sass</li>
+        	<li>AJAX</li>
+        	<li>Gulp</li>
+        	<li>Mobile-First</li>
+        </ul>
+	</div>
+
+	<div id="about" class="hide">
+		<img src="images/logo-200x200.svg">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae. Suspendisse in leo nec nisi porta rhoncus elementum ut neque.</p>
+		<p>Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae. Suspendisse in leo nec nisi porta rhoncus elementum ut neque.</p>
+	</div>
+
+	<div id="portfolio" class="hide">
+
+		<div class="thumb">
+			<img src="images/125x125.svg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae.</p>
+		</div>
+
+		<div class="thumb">
+			<img src="images/125x125.svg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae.</p>
+		</div>
+
+		<div class="thumb">
+			<img src="images/125x125.svg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae.</p>
+		</div>
+
+		<div class="thumb">
+			<img src="images/125x125.svg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae.</p>
+		</div>
+
+		<div class="thumb">
+			<img src="images/125x125.svg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae.</p>
+		</div>
+
+		<div class="thumb">
+			<img src="images/125x125.svg">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae.</p>
+		</div>
+
+	</div>
+
+	<div id="contact" class="hide">
+		<p>I am currently accepting work and I'd love to hear from you! The best way to get a hold of me is via <a href="mailto:kylah.ellison@comcast.net">email.</a></p>
+	
+	</div>
+
+</div>
+</main>
+
+<footer>
+      <ul class="flex">
+        <li><a href="https://twitter.com/Knique07" class="social"><img src="images/Twitter.svg"></a></li>
+        <li><a href="https://www.linkedin.com/in/kylah-ellison-20452920" class="social"><img src="images/Linkedin.svg"></a></li>
+        <li><a href="https://github.com/kylahellison" class="social"><img src="images/Github.svg"></a></li>
+        <li><a href="mailto:kylah.ellison@comcast.net"><img src="images/388-mail.svg"></a></li>
+      </ul>
+      <p class="copyright">Copyright 2017, Kylah Ellison</p>
+</footer>
 
 <script src="js/main.js"></script>
 <!-- <script src="js/main.min.js"></script> -->

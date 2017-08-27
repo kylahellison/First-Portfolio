@@ -13,20 +13,20 @@
 
 <body>
 
-<div id="top-wrap">
-	<header>
-		<img src="images/logo-200x200.svg">
-		<h1>Kylah Ellison</h1>
-		<p>Lifelong learner and web developer</p>
+<div id="top-wrap" class="flex column">
+	<header class="flex column center">
+		<img src="images/logo-200x200.svg" class="centerself">
+		<h1 class="centerself">Kylah Ellison</h1>
+		<p class="centerself">Lifelong learner and web developer</p>
 	</header>
 
-	<nav>
-		<div class="hamburger">
+	<nav class="order1">
+		<div class="hamburger" onclick="clickBurger()">
 			<div class="line"></div>
 			<div class="line"></div>
-			<div class="line"></div>
+			<div class="line"></div> 
 		</div>
-		<ul>
+		<ul id="nav" class="column" style="top: -250px;"> <!-- style="display: none;" -->
 			<li><a href="#home">Home</a></li>
 	        <li><a href="#about">About</a></li>
 	        <li><a href="#portfolio">Portfolio</a></li>
@@ -38,10 +38,10 @@
 <main>
 <div id="main-wrap">
 
-	<div id="home">
-		<h2>Some tagline here</h2>
-		<p>My skillset includes:</p>
-		<ul class="skills">
+	<div id="home" class="flex column center">
+		<h2 class="centerself">Some tagline here</h2>
+		<p class="centerself">My skillset includes:</p>
+		<ul class="flex wrap center skills">
         	<li>HTML</li>
         	<li>CSS</li>
         	<li>JavaScript</li>
@@ -49,16 +49,17 @@
         	<li>Sass</li>
         	<li>AJAX</li>
         	<li>Gulp</li>
+        	<li>Mobile-First</li>
         </ul>
 	</div>
 
-	<div id="about">
+	<div id="about" class="hide">
 		<img src="images/logo-200x200.svg">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae. Suspendisse in leo nec nisi porta rhoncus elementum ut neque.</p>
 		<p>Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae. Suspendisse in leo nec nisi porta rhoncus elementum ut neque.</p>
 	</div>
 
-	<div id="portfolio">
+	<div id="portfolio" class="hide">
 
 		<div class="thumb">
 			<img src="images/125x125.svg">
@@ -92,7 +93,7 @@
 
 	</div>
 
-	<div id="contact">
+	<div id="contact" class="hide">
 		<p>I am currently accepting work and I'd love to hear from you! The best way to get a hold of me is via <a href="mailto:kylah.ellison@comcast.net">email.</a></p>
 	
 	</div>
@@ -101,7 +102,7 @@
 </main>
 
 <footer>
-      <ul>
+      <ul class="flex">
         <li><a href="https://twitter.com/Knique07" class="social"><img src="images/Twitter.svg"></a></li>
         <li><a href="https://www.linkedin.com/in/kylah-ellison-20452920" class="social"><img src="images/Linkedin.svg"></a></li>
         <li><a href="https://github.com/kylahellison" class="social"><img src="images/Github.svg"></a></li>
