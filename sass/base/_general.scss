@@ -8,9 +8,13 @@
 	box-sizing: border-box;
 }
 
+html, body {
+	height: 100%;
+}
+
 body {
 	background: $bodybg; 
-	color: $bodytext;   
+	color: $bodytext;  
 }   
 
 ul {

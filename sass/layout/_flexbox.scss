@@ -18,19 +18,26 @@
 	align-self: center;
 }
 
+
 .order1 {
 	order: -1;
 }
 
-// .order2 {
-// 	order: 1;
-// }
 
-// .order3 {
-// 	order: 2;
-// } 
+
+/*=================================
+=            SPECIFICS            =
+=================================*/
 
 .skills li,
 #nav li {
 	align-self: center;
 }
+
+//Sticky Footer
+	//Also needed the div with a class of content in the HTML 
+		//And a 100% height on body and html
+		//And flex column on the body tag
+.content {
+	flex: 1 0 auto;
+}  

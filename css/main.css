@@ -18,6 +18,9 @@
   margin: 0;
   box-sizing: border-box; }
 
+html, body {
+  height: 100%; }
+
 body {
   background: #383838;
   color: #7F7E7E; }
@@ -123,8 +126,14 @@ footer ul li {
 .order1 {
   order: -1; }
 
+/*=================================
+=            SPECIFICS            =
+=================================*/
 .skills li,
 #nav li {
   align-self: center; }
+
+.content {
+  flex: 1 0 auto; }
 
 /*# sourceMappingURL=main.css.map */
