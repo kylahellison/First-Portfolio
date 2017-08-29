@@ -17,6 +17,18 @@ ul {
 	list-style-type: none;
 }
 
+/*====================================
+=            SPECIFIC USE            =
+====================================*/
+
+.hide {
+	display: none;  
+}
+
+.showBlock {
+	display: block;
+}
+
 
 /*==============================
 =            HEADER            =
@@ -127,10 +139,3 @@ footer {
 
 
 
-.hide {
-	display: none;  
-}
-
-.showBlock {
-	display: block;
-}

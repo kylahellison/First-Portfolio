@@ -369,6 +369,18 @@ ul {
   list-style-type: none;
 }
 
+/*====================================
+=            SPECIFIC USE            =
+====================================*/
+
+.hide {
+  display: none;
+}
+
+.showBlock {
+  display: block;
+}
+
 /*==============================
 =            HEADER            =
 ==============================*/
@@ -406,6 +418,9 @@ nav .hamburger {
   cursor: pointer;
   padding: 12px;
   background-color: #000;
+  z-index: 100;
+  position: relative;
+  width: 100%;
 }
 
 nav .hamburger div {
@@ -421,9 +436,11 @@ nav .hamburger div:last-child {
 }
 
 nav ul {
-  z-index: 100;
+  z-index: 10;
   position: absolute;
   width: 100%;
+  padding-top: 51px;
+  transition: 1s;
 }
 
 nav ul li {
@@ -461,14 +478,6 @@ footer ul li {
 footer ul li img {
   width: 30px;
   height: 30px;
-}
-
-.hide {
-  display: none;
-}
-
-.showBlock {
-  display: block;
 }
 
 .flex {

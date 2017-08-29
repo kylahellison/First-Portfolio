@@ -25,6 +25,15 @@ body {
 ul {
   list-style-type: none; }
 
+/*====================================
+=            SPECIFIC USE            =
+====================================*/
+.hide {
+  display: none; }
+
+.showBlock {
+  display: block; }
+
 /*==============================
 =            HEADER            =
 ==============================*/
@@ -95,12 +104,6 @@ footer ul li {
   footer ul li img {
     width: 30px;
     height: 30px; }
-
-.hide {
-  display: none; }
-
-.showBlock {
-  display: block; }
 
 .flex {
   display: flex; }
