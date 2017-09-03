@@ -1,3 +1,5 @@
+//ctrl + shift + c = color picker
+
 /*==============================
 =            COLOR PALETTE            =
 ==============================*/
@@ -6,17 +8,40 @@ $black: #000;
 $white: #fff;
 $darkgray: #383838;  //**
 $medgray: #464646;
-$ltgray: #7F7E7E;  //**
+
+$dkpurple: #170421;
+$medpurple: #483056;
+$olive: #687842;
+$ltpurple: #AA70CA;
+$ltgreen: #CEF481;
+$veryltpurple: #F4E0FF;
+$ltgray: #9F9F9F; 
+
+//Shades of blue for skill buttons
+$html: #3E91EF;
+$css: #3AE9EF;
+$js: #70ABFC;
+$jq: #6898E7;
+$sass: #72EED5;
+$AJAX: #289AF1;
+$gulp: #ADA9DB;
+$mobile: #929BF0;
+$svg: #66CFF1;
+
 
 /*====================================
 =            COLOR CONFIG            =
 ====================================*/
 
-$bodybg: $darkgray;
+$bodybg: $dkpurple;
 $bodytext: $ltgray;
 $hamburgerbg: $black;
 $navbg: $black;
-
+$navtxt: $ltgreen;
+$navtxthover: $ltpurple;
+$skills: $black;
+$fineprint: $olive;
+ 
 
 
 /*==================================
@@ -30,5 +55,8 @@ $navbg: $black;
 
 $hamburger-style: 5px solid $white;
 $nav-border: 1px solid $medgray;
+$skills-border: 3px solid $ltgreen;
+$img-border: 2px solid $black;
+$img-border2: 2px solid $veryltpurple;
 
 

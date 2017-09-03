@@ -10264,8 +10264,6 @@ function clickBurger() {
 
 
 
-
-
  $(document).ready(function() {
 
     //FUNCTION TO HIDE NAV MENU
@@ -10282,8 +10280,18 @@ function clickBurger() {
             //the link user clicked on becomes "target"
             //Show target, hide all sibling divs.
     $('#nav a').on('click', function(){
-       var target = $(this).attr('rel');
+       var target = $(this).attr('rel'); //uses the rel attribute to select the user-selected div by its ID (which matches the rel)
+       var header = document.getElementById("head");
+       var home = document.getElementById("home");
+
        $("#"+target).show().siblings("div").hide();
+       if ($("#"+target) !== (home)) {
+           $(header).hide();
+       } //if user clicks a link, hide the logo section (header)
+
+       if ((target) == ('home')) {
+            $(header).show();
+       } //if user clicks the home link specifically, do show the logo section (header)
    }); //End function to hide and show content
 
 

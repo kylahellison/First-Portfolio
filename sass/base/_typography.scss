@@ -1,0 +1,42 @@
+nav ul li a {
+	color: $navtxt;
+	transition: all 0.5s ease;
+}
+
+nav ul li a:hover {
+	color: $navtxthover;
+	transform: scale(1.3);
+	    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+}
+
+#portfolio {
+	.thumb {
+		text-align: center;
+		p {
+			font-size: 1em;
+		}
+		.fineprint {
+			font-size: 0.7em;
+			color: $fineprint;
+		}
+	}
+}
+
+.html { color: $html; }
+
+.css { color: $css; }
+
+.javascript { color: $js; }
+
+.jquery { color: $jq; }
+
+.sass { color: $sass; }
+
+.ajax { color: $AJAX; }
+
+.mobile { color: $mobile; }
+
+.svg { color: $svg; } 
+
+.gulp { color: $gulp; } 

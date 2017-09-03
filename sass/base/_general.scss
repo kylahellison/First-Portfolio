@@ -53,6 +53,11 @@ header {
 	img {
 		width: 110px;
 		height: 110px;
+		border-radius: 50%;
+		transition: all 0.6s ease-in;
+	}
+	img:hover {
+		border-radius: 5px;
 	}
 }
 
@@ -113,17 +118,57 @@ nav {
 =            MAIN WIDGETS            =
 ====================================*/
 
-#home {
-	.skills {
+.skills {
 		li {
 			padding: 5px;
 			margin: 10px;
-			background-color: $medgray; ////change this to correct variable////
-			border-radius: 5px;
+			background-color: $skills;
+			border-radius: 5px; 
+			border: $skills-border;
+		}  
+	}
+
+#home {
+	.skills {
+		li {
+			transition: all 0.5s ease;
+		} 
+		li:hover {
+			transform: rotateZ(-15deg)  scale(1.2);
+		   		-webkit-transform: rotateZ(-15deg)  scale(1.2); 
+	        	-ms-transform: rotateZ(-15deg)  scale(1.2); 
 		}
 	}
 }
 
+
+#portfolio {
+	padding: 20px;
+
+	.thumb-container {
+		border: $img-border2;
+		margin-bottom: 15px;
+
+		img {
+			border: $img-border;
+		}
+	}
+	.skills {
+		li {
+			margin: 5px;
+		}
+	}
+	img {
+		width: 200px;
+		height: 200px;
+	}
+	.thumb { 
+		margin-bottom: 40px;
+	}
+	.skill-wrap {
+		width: 80%;     
+	}
+}
 
 /*==============================
 =            FOOTER            =
