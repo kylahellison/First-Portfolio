@@ -23,20 +23,47 @@ nav ul li a:hover {
 	}
 }
 
+
+/*================================
+=            TOP WRAP            =
+================================*/
+#head {
+	h1 {
+		font-weight: $headings-bold;
+	}
+}
+
+#home {
+	h2 {
+		font-weight: $headings;
+	}
+}
+
+
+
+/*=============================
+=            FONTS            =
+=============================*/
+h1 {
+	font-family: $heading;
+}
+
+body {
+	font-family: $body;
+}
+
+
+
+/*================================================
+=            SKILL BUTTON TEXT COLORS            =
+================================================*/
+
 .html { color: $html; }
-
 .css { color: $css; }
-
 .javascript { color: $js; }
-
 .jquery { color: $jq; }
-
 .sass { color: $sass; }
-
 .ajax { color: $AJAX; }
-
 .mobile { color: $mobile; }
-
 .svg { color: $svg; } 
-
 .gulp { color: $gulp; } 

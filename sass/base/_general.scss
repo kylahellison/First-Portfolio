@@ -61,6 +61,12 @@ header {
 	}
 }
 
+#head {
+	h1,
+	img {
+		margin-bottom: 7px; 
+	}
+}
 
 nav {
 	position: relative; //needed to make drop-down hover
@@ -128,8 +134,12 @@ nav {
 		}  
 	}
 
-#home {
+#home { 
+	h2 {
+		margin: 12px 0 7px;
+	}
 	.skills {
+		margin-top: 7px;
 		li {
 			transition: all 0.5s ease;
 		} 
@@ -175,7 +185,11 @@ nav {
 ==============================*/
 
 footer {
+
 	ul {
+		margin-bottom: 15px; 
+		min-height: 30px;
+		max-height: 35px;
 		li {
 			padding: 10px; 
 				img {
