@@ -1,6 +1,74 @@
+/*==================================================
+=       DOCUMENT LEVEL FONT SIZEADJUSTMENTS        =
+==================================================*/
+
+//*BASE SIZES*//
+html {
+	font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+
+
+//*SCALABLE MODULES*//
+nav {
+	font-size: 1.375rem;
+}
+footer {
+	font-size: 0.75rem;
+}
+
+//*TYPE SCALING*//
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+
+
+/*=============================
+=            FONTS            =
+=============================*/
+h1, h2, h3 {
+	font-family: $heading;
+}
+
+body {
+	font-family: $body;
+	color: $bodytext; 
+}
+
+/*==================================
+=            NAVIGATION            =
+==================================*/
+
+nav ul li,
+.welcome,
+.text p,
+.totop,
+#portfolio p,
+.thumb,
+#contact p {
+	text-align: center;
+}
+
 nav ul li a {
 	color: $navtxt;
 	transition: all 0.5s ease;
+	text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -11,14 +79,12 @@ nav ul li a:hover {
 }
 
 #portfolio {
+	h1 {
+		font-size: 2.5em; 
+	}
 	.thumb {
-		text-align: center;
 		p {
 			font-size: 1em;
-		}
-		.fineprint {
-			font-size: 0.7em;
-			color: $fineprint;
 		}
 	}
 }
@@ -39,18 +105,9 @@ nav ul li a:hover {
 	}
 }
 
-
-
-/*=============================
-=            FONTS            =
-=============================*/
-h1 {
-	font-family: $heading;
-}
-
-body {
-	font-family: $body;
-}
+/*====================================
+=            SPECIFIC USE            =
+====================================*/
 
 
 

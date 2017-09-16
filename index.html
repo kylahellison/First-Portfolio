@@ -14,38 +14,52 @@
 
 <body class="flex column">
 
-<div class="content">
+
+<div class="content flex column">  
+
 	<div id="top-wrap" class="flex column">
+
 		<header id="head" class="flex column center">
 
 			<h1 class="centerself">Hi, I'm Kylah</h1>
-
+			<h3 class="centerself">and I'd love to build you a website!</h3>
 			<img src="images/portfolio-not-minimized.jpg" class="centerself">
 			
-			<p class="centerself">and I'd love to build you a website.</p>
+		<div class="stars flex centerself between">
+			<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24"><path d="M11 6.999c2.395.731 4.27 2.607 4.999 5.001.733-2.395 2.608-4.269 5.001-5-2.393-.731-4.268-2.605-5.001-5-.729 2.394-2.604 4.268-4.999 4.999zm7 7c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm-6 5.501c1.198.365 2.135 1.303 2.499 2.5.366-1.198 1.304-2.135 2.501-2.5-1.197-.366-2.134-1.302-2.501-2.5-.364 1.197-1.301 2.134-2.499 2.5zm-6-8.272c.522.658 1.118 1.253 1.775 1.775-.657.522-1.252 1.117-1.773 1.774-.522-.658-1.118-1.253-1.776-1.776.658-.521 1.252-1.116 1.774-1.773zm-.001-4.228c-.875 2.873-3.128 5.125-5.999 6.001 2.876.88 5.124 3.128 6.004 6.004.875-2.874 3.128-5.124 5.996-6.004-2.868-.874-5.121-3.127-6.001-6.001z"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24"><path d="M 13,6.999 C 10.605,7.73 8.73,9.606 8.001,12 7.268,9.605 5.393,7.731 3,7 5.393,6.269 7.268,4.395 8.001,2 8.73,4.394 10.605,6.268 13,6.999 Z m -7,7 C 4.563,14.437 3.438,15.563 3.001,17 2.561,15.563 1.436,14.438 0,14 1.436,13.561 2.561,12.437 3.001,11 3.438,12.436 4.563,13.561 6,13.999 Z M 12,19.5 C 10.802,19.865 9.865,20.803 9.501,22 9.135,20.802 8.197,19.865 7,19.5 8.197,19.134 9.134,18.198 9.501,17 9.865,18.197 10.802,19.134 12,19.5 Z m 6,-8.272 c -0.522,0.658 -1.118,1.253 -1.775,1.775 0.657,0.522 1.252,1.117 1.773,1.774 0.522,-0.658 1.118,-1.253 1.776,-1.776 C 19.116,12.48 18.522,11.885 18,11.228 Z M 18.001,7 c 0.875,2.873 3.128,5.125 5.999,6.001 -2.876,0.88 -5.124,3.128 -6.004,6.004 C 17.121,16.131 14.868,13.881 12,13.001 14.868,12.127 17.121,9.874 18.001,7 Z"/></svg>
+		</div>
+
 		</header>
 
 		<nav class="order1">
+
 			<div class="hamburger" onclick="clickBurger()">
 				<div class="line"></div>
 				<div class="line"></div>
 				<div class="line"></div> 
 			</div>
+
 			<ul id="nav" class="column" style="top: -250px;"> 
 				<li><a href="#" rel="home">Home</a></li>
-		        <li><a href="#" rel="about">About</a></li>
+		        <li><a href="#" rel="about">About Me</a></li>
 		        <li><a href="#" rel="portfolio">Portfolio</a></li>
-		        <li><a href="#" rel="contact">Contact</a></li>
+		        <li><a href="#" rel="contact">Contact</a></li> 
 		    </ul>
+
 		</nav>
 	</div>
+
 
 	<main>
 	<div id="main-wrap">
 
 		<div id="home" class="flex column center">
+
 			<h2 class="centerself">What can I do for you?</h2>
+
 			<p class="centerself">My skillset includes:</p>
+
 			<ul class="flex wrap center skills">
 	        	<li class="html">HTML</li>
 	        	<li class="css">CSS</li>
@@ -57,16 +71,44 @@
 	        	<li class="svg">SVG</li>
 	        	<li class="mobile">Mobile-First</li>
 	        </ul>
+	
+			
+			<div class="welcome centerself">
+	        	<p>Please check out my portfolio projects to see what I've worked on lately, or take a look at the 'About Me' page to get an idea of who I am and why you should hire me. You can always get a hold of me using the "Contact" page - I'd love to hear from you!</p>
+	        </div>
+			
+		<!-- 	<a href="#nav"><p class="totop">Back to Top</p></a> -->
+
 		</div>
 
-		<div id="about" style="display: none">
-			<img src="images/logo-200x200.svg">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras commodo libero ut vulputate efficitur. Ut ullamcorper quis lectus a sollicitudin. In felis lorem, interdum non cursus non, rhoncus in orci. Etiam at pulvinar urna, eget interdum mi. Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae. Suspendisse in leo nec nisi porta rhoncus elementum ut neque.
+		<div id="about" class="flex column center"  style="display: none">
+			<img src="images/portfolio-not-minimized.jpg" class="centerself">
+			<div class="text">
+				<p>I started teaching myself how to code websites back in the days when AOL Instant Messenger, MySpace, and flashy GIFs were some of the hottest trends on the internet. I'd spend hours analyzing code using "View Source" and then borrowing snippets to make my own pages and figure out how everything worked.</p>
+				<p>When I went off to college, I took my studies in a different direction. Years later, I found myself wishing I had stuck with coding.</p>
+				<p>I started researching ways that I could get back into coding, and stumbled across Treehouse. I spent a couple of years getting back into the groove of things using the Treehouse curriculum, then was accepted into their Front End Web Development TechDegree beta program. This is a program designed to teach you the fundamentals of front-end web development, from HTML, CSS, and JavaScript, to accessibility and user experience.</p>
+				<p>The projects you see in my portfolio were generated from this curriculum, and showcase all of the things I leared throughout my TechDegree experience. Below, you can see all of the types of courses I've taken through Treehouse and where I've focused my learning.</p>
+				<p>Although I've made it through the TechDegree program, there will always be more to learn! I am currently looking for work to build up my portfolio with real-life projects while I continue taking courses on Treehouse to make sure I'm always up to date with the latest in web design. Feel free to get a hold of me using the "Contact Me" page if you have any questions or would like to discuss a potential project."</p> 
+			</div>
 
-			Fusce id enim pretium, maximus justo vitae, varius eros. Phasellus elementum fermentum libero, non commodo tortor dignissim vitae. Suspendisse in leo nec nisi porta rhoncus elementum ut neque.</p>
+			<div class="team-treehouse">
+    			<h1>Team Treehouse Achievements</h1>
+    			<h2><strong class='total'>0</strong> points have been earned</h2>
+
+    			<div class="pieChart group flex wrap center">
+      				<div class="pie"></div>
+      				<div class="legend"></div>
+    			</div>
+  				<!-- </a> -->
+			</div>
+
+			<!-- <a href="#nav"><p class="totop">Back to Top</p></a> -->
+
 		</div>
 
 		<div id="portfolio" class="flex column center" style="display: none">
+
+		<p>Please click the images to open a new window and view each project.</p>
 
 			<div class="thumb flex column center center2">
 
@@ -85,7 +127,6 @@
 	        		</ul>
 	        	</div>
 				<p>For this project I was provided a mockup for how a user dashboard should look for a potential web application and asked to code it and make it interactive.</p>
-				<p class="fineprint">Please click the above image to open a new window and view the project.</p>
 
 			</div>
 
@@ -104,7 +145,6 @@
 	        		</ul>
 	        	</div>
 				<p>For this project I was provided a video, transcript,and mockup. I built an interactive video player that synchronized the video and the transcript. The transcript highlights as the video progresses and when a user clicks any part of the transcript, the video jumps ahead to the appropriate place in the video.</p>
-				<p class="fineprint">Please click the above image to open a new window and view the project.</p>
 
 			</div>
 
@@ -123,7 +163,6 @@
 	        		</ul>
 	        	</div>
 				<p>I was provided code for an existing webpage and asked to replace all existing images with SVGs, then add interactivity to some of those SVGs. </p>
-				<p class="fineprint">Please click the above image to open a new window and view the project.</p>
 
 			</div>
 
@@ -142,7 +181,6 @@
 	        		</ul>
 	        	</div>
 				<p>For this project, I was provided a mockup and asked to build a responsive, mobile-friendly and desktop version of an online registration form using media queries and a mobile-first approach.</p>
-				<p class="fineprint">Please click the above image to open a new window and view the project.</p>
 
 			</div>
 
@@ -162,7 +200,6 @@
 	        		</ul>
 	        	</div>
 				<p>For this project, I was provided thumbnail images and descriptions and asked to create an interactive photo gallery using JavaScript and jQuery. At the top of the page there is a search area which can be used to show or hide images depending on user input. When the user clicks on a thumbnail image, that photo will display in a lightbox and show additional information.</p>
-				<p class="fineprint">Please click the above image to open a new window and view the project.</p>
 
 			</div>
 
@@ -182,7 +219,6 @@
 	        		</ul>
 	        	</div>
 				<p>For this project, I was provided mockups for how a site should look in its mobile, tablet, and desktop versions. I was asked to code this website from scratch using a mobile-first approach, then scale it up using media queries and breakpoints.</p>
-				<p class="fineprint">Please click the above image to open a new window and view the project.</p>
 
 			</div>
 
@@ -202,14 +238,33 @@
 	        		</ul>
 	        	</div>
 				<p>In this project, I used JavaScript to create an image gallery that pulls album artwork from the Spotify API. Users can search for an artist or album and the page will use a series of AJAX calls to gather the requested album artwork from the API.</p>
-				<p class="fineprint">Please click the above image to open a new window and view the project.</p>
 
 			</div>
+
+			<!-- <a href="#nav"><p class="totop">Back to Top</p></a> -->
 
 		</div>
 
 		<div id="contact" style="display: none">
 			<p>I am currently accepting work and I'd love to hear from you! The best way to get a hold of me is via <a href="mailto:kylah.ellison@comcast.net">email.</a></p>
+
+
+			<nav class="menu2">
+				   <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open" />
+				   <label class="menu-open-button" for="menu-open">
+				    <span class="lines line-1"></span>
+				    <span class="lines line-2"></span>
+				    <span class="lines line-3"></span>
+				  </label>
+
+				   <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
+				   <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+				   <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+				   <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
+				   <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
+				   <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i> </a>
+			</nav>
+
 		
 		</div>
 
@@ -218,6 +273,7 @@
 </div>
 
 <footer class="flex column">
+<a href="#nav"><p class="totop">Back to Top</p></a>
       <ul class="flex center">
         <li><a href="https://twitter.com/Knique07" class="social"><img src="images/Twitter.svg"></a></li>
         <li><a href="https://www.linkedin.com/in/kylah-ellison-20452920" class="social"><img src="images/Linkedin.svg"></a></li>
@@ -226,6 +282,7 @@
       </ul>
       <p class="centerself">&copy 2017 Kylah Ellison</p>
 </footer>
+
 
 <script src="js/main.js"></script>
 <!-- <script src="js/main.min.js"></script> -->

@@ -1,0 +1,9 @@
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+} //@include size( , );
+
+@mixin margins($top, $bottom) {
+	margin-top: $top;
+	margin-bottom: $bottom;
+} //@include margins( , );
