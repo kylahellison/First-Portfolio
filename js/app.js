@@ -10,6 +10,9 @@ function clickBurger() {
 
 
 
+    
+
+
  $(document).ready(function() {
 
     //FUNCTION TO HIDE NAV MENU
@@ -30,6 +33,10 @@ function clickBurger() {
        var header = document.getElementById("head");
        var home = document.getElementById("home");
 
+       var contact = document.getElementById("contact");
+       var footer = document.getElementById("footer");
+
+
        $("#"+target).show().siblings("div").hide();
        if ($("#"+target) !== (home)) {
            $(header).hide();
@@ -38,8 +45,18 @@ function clickBurger() {
        if ((target) == ('home')) {
             $(header).show();
        } //if user clicks the home link specifically, do show the logo section (header)
+
+       //function to hide footer on contact page only
+           if($(contact).css('display') !== 'none') {
+              $(footer).hide();
+            } else {
+             $(footer).show();
+            }
    }); //End function to hide and show content
 
+
+
+   
 
 }); //END READY
 

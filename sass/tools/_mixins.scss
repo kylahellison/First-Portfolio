@@ -1,4 +1,4 @@
-@mixin size($width, $height) {
+@mixin size($width, $height:$width) {
 	width: $width;
 	height: $height;
 } //@include size( , );
@@ -7,3 +7,32 @@
 	margin-top: $top;
 	margin-bottom: $bottom;
 } //@include margins( , );
+
+
+
+
+
+@mixin tablet {
+  @media screen and (min-width: #{$break-small}) and (max-width: #{$break-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin largetablet {
+  @media screen and (min-width: #{$break-tablet}) and (max-width: #{$break-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: #{$break-desktop}) {
+    @content;
+  }
+}
+
+@mixin largedesktop {
+  @media screen and (min-width: #{$break-lg-desktop}) { 
+    @content;
+  }
+}
+

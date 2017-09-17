@@ -36,11 +36,13 @@ $noise: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAA
 ====================================*/
 
 $bodybg: $medpurple;
-$bodytext: $ltgray;
+$bodytext: $veryltpurple; 
+$h1text: $ltgreen;
+$h2text: $ltgreen; 
 $hamburgerbg: $black;
 $navbg: $black;
 $navtxt: $ltgreen;
-$navtxthover: $ltpurple;
+$navtxthover: $ltpurple; 
 $skills: $black;
 $fineprint: $olive;
  
@@ -62,6 +64,13 @@ $body: 'Muli', sans-serif;
 =            FONT SIZES            =
 ==================================*/
 
+//General
+$h1-size: 3rem;
+$h2-size: 1.7rem;
+$h3-size: 1.3rem;
+$nav-size: 1.375rem;
+$footer-size: 0.75rem;   
+
 
 /*===============================
 =            BORDERS            =
@@ -77,4 +86,18 @@ $thumb-border: 2px dotted $veryltpurple;
 $welcome-bg: rgba(0, 0, 0, 0.5); //MAY NOT USE, DECIDE IF I WANT A BACKROUND HERE
 
 
+/*===================================
+=            BREAKPOINTS            =
+===================================*/
 
+$break-small: 480px;
+$break-tablet: 768px;
+// $break-lg-tablet: 980px;
+$break-desktop: 1280px;
+$break-lg-desktop: 1690px;
+
+// $phone: "(max-width: $break-small)";
+// $small-tablet: "(min-width: 1024px)";
+// $tablet: "(min-width: 768px) and (max-width: 1023px)";
+// $desktop: "(min-width: 1024px)";
+// $large-desktop: "(min-width: 1024px)";

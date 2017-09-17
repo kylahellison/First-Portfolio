@@ -7,40 +7,40 @@ html {
 	font-size: 16px;
 }
 
-@media (max-width: 900px) {
-  html { font-size: 15px; }
+@include largetablet {
+  html { font-size: 17px; }
 }
 
-@media (max-width: 400px) {
-  html { font-size: 13px; }
-}
+@include desktop { 
+  html { font-size: 18px; }
+} 
 
 
 //*SCALABLE MODULES*//
 nav {
-	font-size: 1.375rem;
+	font-size: $nav-size;
 }
 footer {
-	font-size: 0.75rem;
+	font-size: $footer-size;
 }
 
 //*TYPE SCALING*//
 h1 {
-  font-size: 3rem;
+  font-size: $h1-size;
 }
-
+ 
 h2 {
-	font-size: 2rem;
+	font-size: $h2-size;
 }
 
 h3 {
-	font-size: 1.3rem;
+	font-size: $h3-size; 
 }
-
+  
 
 
 /*=============================
-=            FONTS            =
+=       FONTS & COLORS        =
 =============================*/
 h1, h2, h3 {
 	font-family: $heading;
@@ -51,17 +51,27 @@ body {
 	color: $bodytext; 
 }
 
+h1 {
+	color: $h1text;
+}
+
+h2 {
+	color: $h2text;
+}
+
 /*==================================
 =            NAVIGATION            =
 ==================================*/
 
 nav ul li,
 .welcome,
+#home h2,
 .text p,
 .totop,
 #portfolio p,
 .thumb,
-#contact p {
+#contact p,
+#about h3 {
 	text-align: center;
 }
 
@@ -80,12 +90,15 @@ nav ul li a:hover {
 
 #portfolio {
 	h1 {
-		font-size: 2.5em; 
+		font-size: 2.1em; 
 	}
 	.thumb {
 		p {
 			font-size: 1em;
 		}
+	}
+	p {
+		color: $white; 
 	}
 }
 
