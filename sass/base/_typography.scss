@@ -88,6 +88,22 @@ nav ul li a:hover {
         -ms-transform: scale(1.3);
 }
 
+/*=============================
+=            ABOUT            =
+=============================*/
+
+.text {
+	color: $ltgray;
+	h3 {
+		color: $white; 
+	}
+}
+
+
+/*=================================
+=            PORTFOLIO            =
+=================================*/
+
 #portfolio {
 	h1 {
 		font-size: 2.1em; 
@@ -98,8 +114,23 @@ nav ul li a:hover {
 		}
 	}
 	p {
-		color: $white; 
+		color: $white;  
 	}
+}
+
+
+/*===============================
+=            CONTACT            =
+===============================*/
+
+#contact {
+	h1 {
+		font-size: 1.5em; 
+		text-align: center;
+	}
+	.intro {
+		color: $contactintro;
+	} 
 }
 
 

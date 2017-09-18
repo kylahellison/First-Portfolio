@@ -1,16 +1,18 @@
+//when adding a page to the nav menu, need to update the css top values in the javascript, 
+//currently -270px, and need to update the padding-top value of the UL in the general scss 
+
 function clickBurger() {
     var nav = document.getElementById("nav");
-    if (nav.style.top === '-250px') {
+    if (nav.style.top === '-270px') { //was -250
         nav.style.top = '0px';
+        nav.style.padding = '51px 0 0 0';
     }
     else {
-        nav.style.top ='-250px';
+        nav.style.top ='-270px'; //was -250
+        nav.style.padding = '31px 0 0 0';
     }
 }
 
-
-
-    
 
 
  $(document).ready(function() {
@@ -20,7 +22,7 @@ function clickBurger() {
         //If nav menu is showing, hide it
     $(document).on("click", function() {
         if ($('#nav').css('top') == ('0px')) {
-                $('#nav').css('top', '-250px');
+                $('#nav').css('top', '-270px');  //was -250px
             }
     }); //End function to hide nav menu
 

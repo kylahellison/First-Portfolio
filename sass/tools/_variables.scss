@@ -15,7 +15,7 @@ $olive: #687842;
 $ltpurple: #AA70CA;
 $ltgreen: #CEF481;
 $veryltpurple: #F4E0FF;
-$ltgray: #9F9F9F; 
+$ltgray: #f9f1fd; //9F9F9F
 
 //Shades of blue for skill buttons 
 $html: #3E91EF;
@@ -39,12 +39,13 @@ $bodybg: $medpurple;
 $bodytext: $veryltpurple; 
 $h1text: $ltgreen;
 $h2text: $ltgreen; 
-$hamburgerbg: $black;
+$hamburgerbg: $black; 
 $navbg: $black;
 $navtxt: $ltgreen;
 $navtxthover: $ltpurple; 
 $skills: $black;
 $fineprint: $olive;
+$contactintro: $white;
  
 
 /*=============================
@@ -80,11 +81,11 @@ $hamburger-style: 5px solid $white;
 $nav-border: 1px solid $medgray;
 $skills-border: 3px solid $ltgreen;
 $gen-border: 2px solid $black; 
-$img-border2: 2px solid $veryltpurple;
-$thumb-border: 2px dotted $veryltpurple;  
+$img-border2: 2px solid $veryltpurple; 
+$widget-border: 2px solid $medpurple;   
 
-$welcome-bg: rgba(0, 0, 0, 0.5); //MAY NOT USE, DECIDE IF I WANT A BACKROUND HERE
-
+$widget-bg: rgba(0, 0, 0, 0.5); 
+$about-bg: rgba(206, 244, 129, 0.6);     
 
 /*===================================
 =            BREAKPOINTS            =
@@ -94,7 +95,7 @@ $break-small: 480px;
 $break-tablet: 768px;
 // $break-lg-tablet: 980px;
 $break-desktop: 1280px;
-$break-lg-desktop: 1690px;
+$break-lg-desktop: 1690px; 
 
 // $phone: "(max-width: $break-small)";
 // $small-tablet: "(min-width: 1024px)";

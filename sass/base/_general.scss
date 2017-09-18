@@ -44,36 +44,41 @@ ul {
 
 header {
 	z-index: 1; //needed to make drop-down hover
+
 	h1,
 	h3,
 	p {
 		display: inline;
 	}
+
 	img {
 		width: 110px;
 		height: 110px;
 		border-radius: 15px; 
 		border: $gen-border;
-		margin-top: 15px;
-		margin-bottom: 15px;
-		//transition: all 0.6s ease-in;
+		@include margins(30px, 20px)
+		// margin-top: 30px;
+		// margin-bottom: 20px;
+		//transition: all 0.6s ease-in;  
 	}
+
 	// img:hover {
 	// 	border-radius: 5px;
 	// } 
+
 	p:first-of-type {
-	padding-top: 10px;
-} 
+		padding-top: 20px;
+	} 
+
+	.fa-chevron-down {
+		margin-bottom: 15px;
+	}
 }
-
-
-
 
 nav {
 	position: relative; //needed to make drop-down hover
 	width: 100%; //needed to make drop-down hover
 	margin-bottom: 20px;
-
 
 	/*----------  Hamburger Menu  ----------*/
 	.hamburger {
@@ -92,7 +97,7 @@ nav {
 			margin-right: auto; 
 		}
 		div:last-child {
-			margin-bottom: 0;
+			margin-bottom: 0; 
 		}
 	}
 
@@ -101,7 +106,7 @@ nav {
 		z-index: 10; //needed to make drop-down hover
 		position: absolute; //needed to make drop-down hover
 		width: 100%; //needed to make drop-down hover
-		padding-top: 51px;
+		padding-top: 31px; // WAS 51 
 		transition: 1s; 
 	  
 
@@ -111,7 +116,7 @@ nav {
 			border-top: $nav-border;
 
 			a {
-				display: block;
+				display: block; 
 				padding: 12px;
 			}
 		}
@@ -121,33 +126,27 @@ nav {
 
 /*====================================
 =            MAIN WIDGETS            =
-====================================*/
+====================================*/ 
 
-// #main-wrap {
-// 	margin-top: 7px;
-// }
+.skills li {
+	background-color: $skills;
+	border-radius: 5px; 
+	border: $skills-border;
+	padding: 5px;
+	margin: 10px;
+}
 
-// .stars {
-// 	width: 35%; 
-// }  //the div had class of stars flex centerself between
-
-.skills {
-		li {
-			padding: 5px;
-			margin: 10px;
-			background-color: $skills;
-		 	border-radius: 5px; 
-			border: $skills-border;
-		}  
-	}
+/*----------  HOME WIDGET  ----------*/
 
 #home { 
+
 	h2 {
 		margin: 7px 0 7px;
 	}
+
 	.skills {
 		margin-top: 7px;
-		li {
+		li { 
 			transition: all 0.5s ease;
 		} 
 		li:hover { 
@@ -156,16 +155,20 @@ nav {
 	        	-ms-transform: rotateZ(-15deg)  scale(1.2); 
 		}
 	}
+
 	.welcome {
-		background: $welcome-bg;
-		border: $gen-border;
+		@extend %widgetborders; 
+		background: $widget-bg; 
 		width: 80%; 
-		padding: 4px; 
-		margin-bottom: 20px;
+		padding: 8px; 
+		margin: 20px 0;
 	}
 }
 
+/*----------  ABOUT WIDGET  ----------*/
+
 #about {
+
 	img {
 		margin-bottom: 15px;
 		width: 200px;
@@ -174,101 +177,78 @@ nav {
 	}
 
 	.text {
-		padding: 5px;
+		background-color: $widget-bg;   
+		border-radius: 5px;
+		padding: 8px;
+		margin: 15px 5px;
 		p {
-			margin-bottom: 10px;
+			margin-bottom: 15px;
+			background-color: rgba(187, 140, 212, 0.27);   
+			border-radius: 5px;
+			padding: 5px;
 		}
 	}
 
-	h3 {
+	h3 { 
 		margin-bottom: 10px;
 	}
 
 }
 
+/*----------  PORTFOLIO  ----------*/
+
+
 #portfolio {
-	padding: 0 20px 20px 20px;
+
+	padding: 0 10px 20px 10px;
 
 	p {
 		margin-bottom: 25px;
 	}
 
 	h1 {
-		margin-top: 12px;
-		margin-bottom: 12px; 
+		@include margins(12px, 12px)
+		// margin-top: 12px;
+		// margin-bottom: 12px; 
 	}
 
-	.thumb-container {
-		border: $img-border2;
-		margin-bottom: 12px; 
- 
-		img {
-			border: $gen-border;
-		}
-	}
-	.skills {
-		margin-bottom: 10px;
-		margin-top: 10px;
-		li { 
-			margin: 5px;
-		}
-	}
-	img {
-		width: 200px;
-		height: 200px;
-	}
 	.thumb { 
-		margin-bottom: 30px;
-		border-top: $thumb-border;
-		border-bottom: $thumb-border;
+		@extend %widgetborders;
+		background-color: $widget-bg; 
+		margin: 20px 0; 
+		padding: 10px 5px;
+
 		p {
 			margin-bottom: 15px;
 		}
-	}
-	.skill-wrap {
-		width: 80%;     
-	} 
-}
 
-#contact {
-	padding: 0 20px;
-
-	nav {
-		margin-top: 130px;
-	}
-
-	.copy {
-		position: fixed;
-		bottom: 0;
-		text-align: center;
-	} 
-}
-
-/*==============================
-=            FOOTER            =
-==============================*/
-
-footer {
-	background-color: $black;
-
-	ul {
-		margin-bottom: 15px; 
-		min-height: 30px;
-		max-height: 35px;
-		li {
-			padding: 10px; 
-				img {
-					width: 30px;  
-					height: 30px;	
-				}
+		.thumb-container {
+			border: $img-border2;
+			margin-bottom: 12px; 
+ 
+			img {
+				border: $gen-border;
+				width: 200px;
+				height: 200px;
+			}
 		}
+		.skill-wrap {
+			width: 80%;   
+
+			.skills {
+				@include margins(10px, 10px)
+				// margin-bottom: 10px;
+				// margin-top: 10px;
+				li {  
+					margin: 5px;
+				}
+			}  
+		} 
 	}
+
 }
 
-
-
-
-
+/*----------  TREEHOUSE WIDGET  ----------*/
 
 //HAVE TO FIGURE OUT WHERE TO PUT THIS
 //TREEHOUSE WHEEL CODE FROM ETHAN NEFF
@@ -286,12 +266,7 @@ $size-inner: $size-circle - $size-thickness * 2;
 .group:after {content:"";display:table;clear:both;}
 
 // general
-body {
 
-  a {
-    text-decoration: none;
-  }
-  
   .team-treehouse {
 	
 	margin-top: 15px;
@@ -305,10 +280,12 @@ body {
     h2 {
       font-weight: normal;
  	  font-size: 1.2rem; 
- 	  margin-top: 10px;
+ 	  margin-top: 15px;
+ 	  margin-bottom: 15px;
+ 	  color: $white;
     }
   }
-}
+
 
 
 // pie chart
@@ -324,6 +301,7 @@ body {
   width: $size-circle;
   position: relative;
   float:left;
+  margin-bottom: 25px; 
 
   &::before {
     content: "";
@@ -384,3 +362,133 @@ body {
     font-weight: bold;
   }
 }
+
+/*----------  CONTACT WIDGET  ----------*/
+
+
+#contact {
+
+	padding: 0 20px;  	
+
+	.copy {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		text-align: center;
+		background-color: $black;
+		border-top: 1px solid white; 
+		padding: 5px;
+	} 
+
+	.contactbox {
+		@extend %widgetborders;
+		background-color: $widget-bg; 
+		margin: 20px 0; 
+		padding: 10px 5px;
+
+		ul {
+			padding-left: 20px;
+			padding-right: 3px;
+
+			li { 
+				list-style-type: circle;
+				padding: 5px 0;
+			}
+		}
+		h1 {
+			margin-bottom: 8px; 
+		}
+	}
+
+	.socialbox p {
+		margin: 5px 0;
+	}
+
+	.socialcontact a,
+	.githubcontact a {
+	    border-radius: 10px; 
+	    width: 50px;
+	    height: 50px;
+	    color: #FFFFFF;
+	    text-align: center;
+	    line-height: 50px;
+	   -webkit-transform: translate3d(0, 0, 0);
+	   transform: translate3d(0, 0, 0);
+	   -webkit-transition: -webkit-transform ease-out 200ms;
+	   transition: -webkit-transform ease-out 200ms;
+	   transition: transform ease-out 200ms;
+	   transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+	   margin: 10px;
+	}
+
+	div:nth-of-type(3) {
+		margin-bottom: 70px;
+	}
+
+	// .githubcontact {
+	// 	margin-bottom: 40px;
+	// }
+
+	// ICON COLORS //
+
+	.green {
+	   background-color: #70CC72;
+	}
+
+	.lightblue {
+	   background-color: #62C2E4;
+	}
+
+	.red {
+	   background-color: #FE4365;
+	} 
+
+
+	.purple {
+	   background-color: #C49CDE;
+	}
+
+	.green,
+	.lightblue,
+	.red,
+	.purple {
+	   box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+	   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
+	}
+
+	.green:hover,
+	.lightblue:hover,
+	.red:hover,
+	.purple:hover {
+	   color: $white;
+	   text-shadow: none;
+	}
+
+}
+
+/*==============================
+=            FOOTER            =
+==============================*/
+
+footer {
+	background-color: $black;
+
+	ul {
+		margin-bottom: 15px; 
+		min-height: 30px;
+		max-height: 35px;
+		li {
+			padding: 10px; 
+				img {
+					width: 30px;  
+					height: 30px;	
+				}
+		}
+	}
+}
+
+
+
+
+
+
