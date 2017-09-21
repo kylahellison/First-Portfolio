@@ -163,6 +163,11 @@ nav {
 		padding: 8px; 
 		margin: 20px 0;
 	}
+
+	@include tablet {
+		max-width: 80%;
+		margin: 0 auto;
+	}
 }
 
 /*----------  ABOUT WIDGET  ----------*/
@@ -193,6 +198,11 @@ nav {
 		margin-bottom: 10px;
 	}
 
+	@include tablet {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
 }
 
 /*----------  PORTFOLIO  ----------*/
@@ -217,6 +227,10 @@ nav {
 		background-color: $widget-bg; 
 		margin: 20px 0; 
 		padding: 10px 5px;
+
+		@include tablet {
+			padding: 10px;
+		}
 
 		p {
 			margin-bottom: 15px;
@@ -244,6 +258,11 @@ nav {
 				}
 			}  
 		} 
+	}
+
+	@include tablet {
+		max-width: 80%;
+		margin: 0 auto;
 	}
 
 }
@@ -370,6 +389,11 @@ $size-inner: $size-circle - $size-thickness * 2;
 
 	padding: 0 20px;  	
 
+	@include tablet {
+		max-width: 80%;
+		margin: 0 auto;
+	}
+
 	.copy {
 		width: 100%;
 		position: fixed;
@@ -385,6 +409,11 @@ $size-inner: $size-circle - $size-thickness * 2;
 		background-color: $widget-bg; 
 		margin: 20px 0; 
 		padding: 10px 5px;
+
+		@include tablet {
+			max-width: 85%;
+			padding: 10px;
+		}
 
 		ul {
 			padding-left: 20px;

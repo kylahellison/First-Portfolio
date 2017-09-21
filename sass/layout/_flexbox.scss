@@ -52,3 +52,17 @@
 .content {
 	flex: 1 0 auto;
 }  
+
+.contactbox {
+	@include largetablet {
+		width: 60%;
+		flex-direction: row; 
+		align-items: center;
+	}
+	h1 {
+		@include largetablet {
+			margin-right: 20px;
+		}
+	}
+
+}
