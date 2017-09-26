@@ -2,3 +2,20 @@
 	border-radius: 5px;
 	border: $widget-border; 
 }  
+
+%navcolor {
+	background-color: $navbg;
+	border-top: $nav-border;
+}
+
+%navstyle {
+	display: block; 
+	padding: 12px;
+}
+
+%myimage {
+	width: 110px;
+	height: 110px;
+	border-radius: 15px; 
+	border: $gen-border;
+}

@@ -58,6 +58,33 @@ function clickBurger() {
 
 
 
+//FUNCTION TO HIDE AND SHOW CONTENT ON LARGE SCREENS
+
+    $('#wide-nav a').on('click', function(){
+       var target = $(this).attr('rel'); //uses the rel attribute to select the user-selected div by its ID (which matches the rel)
+       var header = document.getElementById("head");
+       var home = document.getElementById("home");
+
+       var contact = document.getElementById("contact");
+       var footer = document.getElementById("footer");
+
+        $(footer).hide();
+
+       $("#"+target).show().siblings("div").hide();
+       if ($("#"+target) !== (home)) {
+           $(header).hide();
+       } 
+
+
+       //function to hide footer on contact page only
+           // if($(contact).css('display') !== 'none') {
+           //    $(footer).hide();
+           //  } else {
+           //   $(footer).show();
+           //  }
+   }); //End function to hide and show content on large screens
+
+
    
 
 }); //END READY
