@@ -4,35 +4,41 @@
 /*====================================
 =            COLOR CONFIG            =
 ====================================*/
+/*===============================
+=            BORDERS            = 
+===============================*/
 /*=============================
 =            FONTS            =
 =============================*/
 /*==================================
 =            FONT SIZES            =
 ==================================*/
-/*===============================
-=            BORDERS            =
-===============================*/
 /*===================================
 =            BREAKPOINTS            =
 ===================================*/
-#home .welcome, #portfolio .thumb, #contact .contactbox {
-  border-radius: 5px;
-  border: 2px solid #483056; }
+.mobile-nav ul li {
+  background-color: #042e4f;
+  border-top: 2px solid #fff; }
 
-#left-column .wide-nav li, .mobile-nav ul li {
-  background-color: #000;
-  border-top: 1px solid #464646; }
-
-#left-column .wide-nav li a, .mobile-nav ul li a {
+.mobile-nav ul li a, #left-column .wide-nav li a {
   display: block;
   padding: 12px; }
 
-header img, #home img {
-  width: 110px;
-  height: 110px;
+#left-column .wide-nav li {
+  background-color: #042e4f;
+  border-top: 2px solid #fff; }
+
+#left-column .wide-nav li:hover, #left-column .wide-nav .selected {
+  background-color: #f9fbfc;
+  border-top: 2px solid #042e4f; }
+
+header img, #about img {
   border-radius: 15px;
-  border: 2px solid #000; }
+  border: 3px solid #000; }
+
+#home .welcome, #portfolio .thumb, #contact .contactbox {
+  border-radius: 5px;
+  border: 6px solid #000; }
 
 /*=================================
 =            UNIVERSAL            =
@@ -49,56 +55,28 @@ html {
   height: 100%; }
 
 body {
-  background-image: url(data:image/png;base64,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);
-  background-color: #483056;
+  background-color: #f9fbfc;
+  color: #135589;
   min-height: 100%; }
 
 ul {
   list-style-type: none; }
 
-/*====================================
+/*==================================== 
 =            SPECIFIC USE            = 
 ====================================*/
 .content {
-  flex-direction: column;
-  background: linear-gradient(to bottom, rgba(72, 48, 86, 0.4) 0%, black 85%);
-  position: relative;
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%; }
-  @media only screen and (min-width: 568px) {
-    .content {
-      flex-direction: row; } }
 
 .landscape-wrap {
   margin-top: 55px; }
   @media only screen and (min-width: 568px) {
     .landscape-wrap {
-      position: absolute;
-      right: 0;
+      margin-top: 0;
+      width: 90%;
       min-height: 100%;
-      margin-left: 260px; } }
-
-/*=======================================
-=            LEFT NAVIGATION            =
-=======================================*/
-#left-column {
-  display: none;
-  background-color: #000;
-  min-height: 100%;
-  width: 30%;
-  max-width: 250px;
-  position: fixed;
-  margin-left: 0px; }
-  @media only screen and (min-width: 568px) {
-    #left-column {
-      display: flex; } }
-  #left-column .wide-nav {
-    width: 100%; }
-    #left-column .wide-nav ul {
-      width: 100%;
-      height: 100%; }
-    #left-column .wide-nav li {
-      width: 100%; }
+      margin-left: 50px; } }
 
 /*=========================================
 =            MOBILE NAVIGATION            =
@@ -120,12 +98,12 @@ ul {
     .mobile-nav {
       display: none; } }
   .mobile-nav .hamburger {
-    cursor: pointer;
+    width: 100%;
     padding: 12px;
-    background-color: #000;
+    background-color: #042e4f;
+    cursor: pointer;
     z-index: 100;
-    position: relative;
-    width: 100%; }
+    position: relative; }
     .mobile-nav .hamburger div {
       border-bottom: 5px solid #fff;
       width: 35px;
@@ -142,6 +120,24 @@ ul {
     transition: 1s; }
     .mobile-nav ul li {
       width: 100%; }
+
+/*=======================================
+=            LEFT NAVIGATION            =
+=======================================*/
+#left-column {
+  display: none;
+  background-color: #042e4f;
+  min-height: 100%;
+  min-width: 200px;
+  max-width: 220px; }
+  #left-column .wide-nav {
+    width: 100%;
+    margin-top: 50px; }
+    #left-column .wide-nav li:last-child {
+      border-bottom: 2px solid #fff; }
+  #left-column img {
+    margin-top: 20px;
+    max-width: 80%; }
 
 /*==============================
 =            HEADER            =
@@ -160,7 +156,9 @@ header {
     display: inline; }
   header img {
     margin-top: 30px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    width: 70%;
+    max-width: 300px; }
   header p:first-of-type {
     padding-top: 20px; }
   header .fa-chevron-down {
@@ -171,11 +169,15 @@ header {
 ====================================*/
 #main-wrap {
   min-height: 100%; }
+  @media only screen and (min-width: 568px) {
+    #main-wrap {
+      max-height: 100vh;
+      overflow: auto; } }
 
 .skills li {
-  background-color: #000;
+  background-color: #135589;
   border-radius: 5px;
-  border: 3px solid #CEF481;
+  border: 3px solid #000;
   padding: 5px;
   margin: 10px; }
 
@@ -193,83 +195,78 @@ header {
     -ms-transform: rotateZ(-15deg) scale(1.2); }
 
 #home .welcome {
-  background: rgba(0, 0, 0, 0.5);
+  background: #042e4f;
   width: 80%;
   padding: 8px;
   margin: 20px 0; }
 
-@media only screen and (min-width: 480px) and (max-width: 567px) {
+@media only screen and (min-width: 568px) {
   #home {
-    max-width: 80%;
-    margin: 0 auto; } }
-
-#home img {
-  display: none; }
-  @media only screen and (min-width: 568px) {
-    #home img {
-      display: inline; } }
+    width: 85%; } }
 
 /*----------  ABOUT WIDGET  ----------*/
 #about img {
-  margin-bottom: 15px;
+  margin: 15px;
   width: 200px;
-  height: 200px;
-  border-radius: 5px; }
+  height: 200px; }
+  @media only screen and (min-width: 568px) {
+    #about img {
+      display: none; } }
 
 #about .text {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #135589;
   border-radius: 5px;
-  padding: 8px;
-  margin: 15px 5px; }
+  padding: 20px;
+  margin: 15px; }
   #about .text p {
     margin-bottom: 15px;
-    background-color: rgba(187, 140, 212, 0.27);
+    background-color: #042e4f;
     border-radius: 5px;
-    padding: 5px; }
+    padding: 10px; }
 
 #about h3 {
   margin-bottom: 10px; }
 
-@media only screen and (min-width: 480px) and (max-width: 567px) {
+@media only screen and (min-width: 568px) {
   #about {
     max-width: 80%;
     margin: 0 auto; } }
 
 /*----------  PORTFOLIO  ----------*/
 #portfolio {
-  padding: 0 10px 20px 10px; }
+  padding: 20px 10px; }
   #portfolio p {
     margin-bottom: 25px; }
   #portfolio h1 {
     margin-top: 12px;
     margin-bottom: 12px; }
   #portfolio .thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 20px 0;
+    background-color: #042e4f;
+    margin: 20px 0px;
     padding: 10px 5px; }
-    @media only screen and (min-width: 480px) and (max-width: 567px) {
+    @media only screen and (min-width: 568px) {
       #portfolio .thumb {
-        padding: 10px; } }
+        padding: 10px;
+        max-width: 90%;
+        margin: 20px auto; } }
     #portfolio .thumb p {
-      margin-bottom: 15px; }
+      margin-bottom: 10px; }
     #portfolio .thumb .thumb-container {
-      border: 2px solid #F4E0FF;
-      margin-bottom: 12px; }
+      border: 3px solid #AED9DA;
+      margin-bottom: 12px;
+      border-radius: 5px; }
       #portfolio .thumb .thumb-container img {
-        border: 2px solid #000;
+        border: 3px solid #000;
+        border-radius: 5px;
         width: 200px;
         height: 200px; }
     #portfolio .thumb .skill-wrap {
-      width: 80%; }
+      width: 85%; }
       #portfolio .thumb .skill-wrap .skills {
         margin-top: 10px;
         margin-bottom: 10px; }
         #portfolio .thumb .skill-wrap .skills li {
           margin: 5px; }
-  @media only screen and (min-width: 480px) and (max-width: 567px) {
-    #portfolio {
-      max-width: 80%;
-      margin: 0 auto; } }
 
 /*----------  TREEHOUSE WIDGET  ----------*/
 .group:after {
@@ -352,35 +349,45 @@ header {
 
 /*----------  CONTACT WIDGET  ----------*/
 #contact {
-  padding: 0 20px; }
+  padding: 0 20px;
+  width: 100%; }
   @media only screen and (min-width: 480px) and (max-width: 567px) {
     #contact {
-      max-width: 80%;
+      max-width: 85%;
       margin: 0 auto; } }
   #contact .copy {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    background-color: #000;
-    border-top: 1px solid white;
     padding: 5px; }
+    @media only screen and (min-width: 568px) {
+      #contact .copy {
+        display: none; } }
   #contact .contactbox {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #042e4f;
     margin: 20px 0;
-    padding: 10px 5px; }
-    @media only screen and (min-width: 480px) and (max-width: 567px) {
+    padding: 10px 5px;
+    width: 100%; }
+    @media only screen and (min-width: 568px) {
       #contact .contactbox {
-        max-width: 85%;
-        padding: 10px; } }
+        max-width: 700px; } }
     #contact .contactbox ul {
       padding-left: 20px;
       padding-right: 3px; }
+      @media only screen and (min-width: 768px) {
+        #contact .contactbox ul {
+          padding-right: 20px; } }
       #contact .contactbox ul li {
         list-style-type: circle;
         padding: 5px 0; }
     #contact .contactbox h1 {
       margin-bottom: 8px; }
+      @media only screen and (min-width: 768px) {
+        #contact .contactbox h1 {
+          margin-right: 20px; } }
+    @media only screen and (min-width: 768px) {
+      #contact .contactbox .split .l-split {
+        margin-right: 20px; } }
+    @media only screen and (min-width: 768px) {
+      #contact .contactbox .leftalign {
+        width: 120px; } }
   #contact .socialbox p {
     margin: 5px 0; }
   #contact .socialcontact a,
@@ -388,7 +395,7 @@ header {
     border-radius: 10px;
     width: 50px;
     height: 50px;
-    color: #FFFFFF;
+    color: #fff;
     text-align: center;
     line-height: 50px;
     -webkit-transform: translate3d(0, 0, 0);
@@ -418,27 +425,25 @@ header {
   #contact .lightblue:hover,
   #contact .red:hover,
   #contact .purple:hover {
-    color: #fff;
+    color: #000;
     text-shadow: none; }
 
 /*==============================
 =            FOOTER            =
 ==============================*/
-footer {
-  display: flex;
-  background-color: #000; }
-  footer ul {
-    margin-bottom: 15px;
-    min-height: 30px;
-    max-height: 35px; }
-    footer ul li {
-      padding: 10px; }
-      footer ul li img {
-        width: 30px;
-        height: 30px; }
-  @media only screen and (min-width: 568px) {
-    footer {
-      display: none; } }
+footer ul {
+  margin-bottom: 15px;
+  min-height: 30px;
+  max-height: 35px; }
+  footer ul li {
+    padding: 10px; }
+    footer ul li img {
+      width: 30px;
+      height: 30px; }
+
+@media only screen and (min-width: 568px) {
+  footer {
+    display: none; } }
 
 /*==================================================
 =       DOCUMENT LEVEL FONT SIZEADJUSTMENTS        =
@@ -446,7 +451,7 @@ footer {
 html {
   font-size: 16px; }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media only screen and (min-width: 768px) {
   html {
     font-size: 17px; } }
 
@@ -477,13 +482,13 @@ h1, h2, h3 {
 
 body {
   font-family: "Muli", sans-serif;
-  color: #F4E0FF; }
+  color: #135589; }
 
 h1 {
-  color: #CEF481; }
+  color: #000; }
 
 h2 {
-  color: #CEF481; }
+  color: #2A93D5; }
 
 /*====================================
 =            LEFT NAV BAR            =
@@ -515,15 +520,21 @@ nav ul li,
   text-align: center; }
 
 nav ul li a {
-  color: #CEF481;
+  color: #3DDAD7;
   transition: all 0.5s ease;
   text-decoration: none; }
 
 nav ul li a:hover {
-  color: #AA70CA;
+  color: #2A93D5;
   transform: scale(1.3);
   -webkit-transform: scale(1.3);
   -ms-transform: scale(1.3); }
+
+/*============================
+=            HOME            =
+============================*/
+.welcome p {
+  color: #fff; }
 
 /*=============================
 =            ABOUT            =
@@ -537,22 +548,42 @@ nav ul li a:hover {
 =            PORTFOLIO            =
 =================================*/
 #portfolio h1 {
-  font-size: 2.1em; }
+  font-size: 2.1em;
+  color: #AED9DA; }
+
+#portfolio h3 {
+  color: #AED9DA; }
 
 #portfolio .thumb p {
-  font-size: 1em; }
+  font-size: 1em;
+  color: #3DDAD7; }
 
 #portfolio p {
-  color: #fff; }
+  color: #000;
+  text-align: center; }
 
 /*===============================
 =            CONTACT            =
 ===============================*/
+#contact p {
+  color: #fff; }
+
 #contact h1 {
   font-size: 1.5em;
-  text-align: center; }
+  text-align: center;
+  color: #3DDAD7; }
+  @media only screen and (min-width: 768px) {
+    #contact h1 {
+      text-align: left; } }
 
 #contact .intro {
+  color: #000; }
+
+#contact .copy {
+  text-align: center;
+  color: #135589; }
+
+#contact .contactbox li {
   color: #fff; }
 
 /*================================
@@ -571,31 +602,31 @@ nav ul li a:hover {
 =            SKILL BUTTON TEXT COLORS            =
 ================================================*/
 .html {
-  color: #3E91EF; }
+  color: #8ded20; }
 
 .css {
-  color: #3AE9EF; }
+  color: #07f77f; }
 
 .javascript {
-  color: #70ABFC; }
+  color: #c4fc35; }
 
 .jquery {
-  color: #6898E7; }
+  color: #07f72e; }
 
 .sass {
-  color: #72EED5; }
+  color: #b3ed21; }
 
 .ajax {
-  color: #289AF1; }
+  color: #72f707; }
 
 .mobile {
-  color: #91EEF1; }
+  color: #4ff787; }
 
 .svg {
-  color: #66CFF1; }
+  color: #15c951; }
 
 .gulp {
-  color: #ADA9DB; }
+  color: #bce25a; }
 
 .flex {
   display: flex; }
@@ -632,16 +663,33 @@ nav ul li a:hover {
   align-self: center; }
 
 .content {
-  flex: 1 0 auto; }
+  flex: 1 0 auto;
+  flex-direction: column; }
+  @media only screen and (min-width: 568px) {
+    .content {
+      flex: 0 1 auto;
+      flex-direction: row; } }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media only screen and (min-width: 568px) {
+  #left-column {
+    display: flex; } }
+
+@media only screen and (min-width: 768px) {
   .contactbox {
-    width: 60%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; } }
+
+@media only screen and (min-width: 768px) {
+  .contactbox .split {
     flex-direction: row;
     align-items: center; } }
 
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
-  .contactbox h1 {
-    margin-right: 20px; } }
+@media only screen and (min-width: 568px) {
+  #home img {
+    order: 99; } }
+
+footer {
+  display: flex; }
 
 /*# sourceMappingURL=main.css.map */

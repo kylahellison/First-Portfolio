@@ -24,7 +24,7 @@
 } 
 
 @mixin largetablet {
-  @media only screen and (min-width: #{$break-tablet}) and (max-width: #{$break-desktop - 1px}) {
+  @media only screen and (min-width: #{$break-tablet}) {
     @content;
   }
 }

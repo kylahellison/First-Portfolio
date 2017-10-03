@@ -1,10 +1,6 @@
-%widgetborders {
-	border-radius: 5px;
-	border: $widget-border; 
-}  
-
+//MOBILE NAVIGATION
 %navcolor {
-	background-color: $navbg;
+	background-color: $hamburgerbg;
 	border-top: $nav-border;
 }
 
@@ -12,10 +8,25 @@
 	display: block; 
 	padding: 12px;
 }
-
-%myimage {
-	width: 110px;
-	height: 110px;
-	border-radius: 15px; 
-	border: $gen-border;
+ 
+ //WIDE SCREEN NAVIGATION
+ %widenavcolor {
+	background-color: $leftmenubg;
+	border-top: $nav-border; 
 }
+%widenavcolorhover {
+	background-color: $bodybg;
+	border-top: $wide-nav-border; 
+}
+
+//IMAGE STYLE
+%myimage {
+	border-radius: 15px; 
+	border: $img-border2;  
+}
+
+//WIDGETS
+%widgetborders {
+	border-radius: 5px;
+	border: $widget-border; 
+}  

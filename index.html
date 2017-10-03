@@ -18,7 +18,7 @@
 
 <div class="content flex">  
 
-<!-- 	STICKY TOP MENU MOBILE DEVICES -->
+	<!-- STICKY TOP MENU MOBILE DEVICES -->
 			<div id="sticky-nav">
 				<nav class="mobile-nav">
 					<div class="hamburger" onclick="clickBurger()">
@@ -36,6 +36,7 @@
 				    </ul>
 				</nav>
 			</div>
+	<!-- END STICKY TOP MENU FOR MOBILE DEVICES -->
 
 	<!-- NAV SIDEBAR FOR LARGER SCREENS -->
 	<div id="left-column" class="center2 column">
@@ -44,6 +45,8 @@
 		<p class="centerself">//==============</p>
 		<h3 class="centerself"> Front End Web Developer </h3>
 		<p class="centerself">==============//</p>
+
+		<img src="images/portfolio-not-minimized.jpg" class="centerself">
 
 		<nav id="wide-nav" class="wide-nav">
 			<ul class="column flex"> 
@@ -78,21 +81,7 @@
 
 			</header>
 
-<!-- 			<nav class="mobile-nav order1">
-				<div class="hamburger" onclick="clickBurger()">
-					<div class="line"></div>
-					<div class="line"></div>
-					<div class="line"></div> 
-				</div>
-
-				<ul id="nav" class="column" style="top: -250px;"> 
-					<li><a href="#" rel="home">Home</a></li>
-			        <li><a href="#" rel="about">About Me</a></li>
-			        <li><a href="#" rel="portfolio">Portfolio</a></li>
-			         <li><a href="#" rel="treehouse">Treehouse</a></li> 
-			        <li><a href="#" rel="contact">Contact</a></li> 
-			    </ul>
-			</nav> -->
+			<!-- #MOBILE-NAV WAS HERE -->
 
 		</div>
 
@@ -101,8 +90,8 @@
 		<div id="main-wrap">
 
 			<div id="home" class="flex column center">
-
-				<img src="images/portfolio-not-minimized.jpg" class="centerself">
+<!-- 
+				<img src="images/portfolio-not-minimized.jpg" class="centerself"> -->
 
 				<h2 class="centerself">What can I do for you?</h2>
 
@@ -164,7 +153,7 @@
 				        	<li class="css">CSS</li>
 				        	<li class="javascript">JavaScript</li>
 				        	<li class="svg">SVGs</li>
-				        	<li>Mobile-First</li>
+				        	<li class="mobile">Mobile-First</li>
 		        		</ul>
 		        	</div>
 					<p>For this project, I was provided a mockup for how a user dashboard should look for a potential web application and asked to code it and make it interactive.</p>
@@ -301,7 +290,9 @@
 				<p class="intro">I am currently accepting work and I'd love to hear from you!</p>
 
 				<div class="contactbox flex center column">
-					<h1>If:</h1>
+					<div class="leftalign">
+						<h1>If:</h1>
+					</div>
 					<ul>
 						<li>You have a project proposal you'd like to discuss</li>
 						<li>You have an idea you'd like me to help implement</li>
@@ -311,7 +302,9 @@
 				</div>
 
 				<div class="contactbox flex center column">
-					<h1>Then:</h1>
+					<div class="leftalign">
+						<h1>Then:</h1>
+					</div>
 					<ul>
 						<li>Please send me an email to: <a href="mailto:kylah.ellison@comcast.net">kylah.ellison@comcast.net</a></li>
 						<li>Please explain what it is you'd like me to work on, what your deadline is, and what budget you have to work with.</li>
@@ -320,19 +313,24 @@
 				</div>
 
 				<div class="contactbox flex center column socialbox">
-					<h1>Don't forget:</h1>
-					<div class="flex column">
+					<div class="leftalign">
+						<h1>Don't forget:</h1>
+					</div>
+					<div class="split flex column">
+						<div class="l-split">
 						<p>You can also get a hold of me via:</p>
 						<div class="socialcontact flex center">
 							<a href="https://www.linkedin.com/in/kylah-ellison-20452920" class="green"> <i class="fa fa-linkedin fa-lg"></i> </a>
 							<a href="https://twitter.com/Knique07" class="lightblue"> <i class="fa fa-twitter fa-lg"></i> </a>
 							<a href="#" class="red"> <i class="fa fa-google-plus fa-lg"></i> </a>
 						</div>
-
+					</div>
+					<div>
 						<p>Or check out my GitHub profile here:</p>
 						<div class="githubcontact flex center">
 							<a href="https://github.com/kylahellison" class=" purple"> <i class="fa fa-github fa-lg"></i> </a>
 						</div>
+					</div>
 					</div>
 				</div>
 
