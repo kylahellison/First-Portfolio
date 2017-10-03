@@ -12,25 +12,150 @@ h1, h2, h3 {
 	margin: 0;
 }
 
-html, body,  {
-	min-height: 100vh;
+html {
+height: 100%;
 }
 
 body {
-	background-image: $noise;
-	background-color: $bodybg;  
+	//background-image: $noise; 
+	background-color: $bodybg; 
+	color: $bodytext;
+	min-height: 100%;
 }    
 
 ul {
-	list-style-type: none;
+	list-style-type: none; 
 }
 
-/*====================================
-=            SPECIFIC USE            =
+/*==================================== 
+=            SPECIFIC USE            = 
 ====================================*/
 
 .content {
-	background: linear-gradient(to bottom, rgba(72, 48, 86, 0.4) 0%, rgba(0, 0, 0, 1) 85%);
+	min-height: 100vh; 
+	width: 100%; 
+
+	//background: linear-gradient(to bottom, rgba(72, 48, 86, 0.4) 0%, rgba(0, 0, 0, 1) 85%);
+}
+
+.landscape-wrap {
+	margin-top: 55px;
+
+	@include landscapephone {
+		margin-top: 0;
+		width: 90%;
+		min-height: 100%; 
+		margin-left: 50px;  
+
+		//background: linear-gradient(to bottom, rgba(72, 48, 86, 0.4) 0%, rgba(0, 0, 0, 1) 85%);
+	}
+} 
+
+
+
+/*=========================================
+=            MOBILE NAVIGATION            =
+=========================================*/
+
+#sticky-nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin-bottom: 30px;
+	z-index: 100;
+}
+
+.mobile-nav {
+	position: relative; //needed to make drop-down hover
+	width: 100%; //needed to make drop-down hover
+	margin-bottom: 20px;
+
+	@include landscapephone {
+		display: none;
+	}
+
+	/*----------  Hamburger Menu  ----------*/
+	.hamburger {
+		width: 100%; 
+		padding: 12px;
+		background-color: $hamburgerbg;
+		cursor: pointer;
+		z-index: 100;
+		position: relative;
+
+		div {
+			border-bottom: $hamburger-style;
+			width: 35px;
+			margin-bottom: 6px;
+			margin-left: auto;
+			margin-right: auto; 
+		}
+		div:last-child {
+			margin-bottom: 0;  
+		}
+	}
+
+	/*----------  Nav list  ----------*/
+	ul {
+		z-index: 10; //needed to make drop-down hover
+		position: absolute; //needed to make drop-down hover
+		width: 100%; //needed to make drop-down hover
+		padding-top: 31px; // WAS 51 
+		transition: 1s; 
+
+		li { 
+			width: 100%;
+			@extend %navcolor;
+
+			a {
+				@extend %navstyle;
+			}
+		}
+	}
+}
+
+
+/*=======================================
+=            LEFT NAVIGATION            =
+=======================================*/
+
+#left-column {
+	display: none;
+	background-color: $leftmenubg; 
+	min-height: 100%;
+	min-width: 200px; 
+	max-width: 220px; 
+
+	.wide-nav { 
+		width: 100%;
+		margin-top: 50px;
+
+		li { 
+			@extend %widenavcolor;
+
+			a {
+				@extend %navstyle; 
+			}
+		}
+
+		li:last-child {
+			border-bottom: $nav-border; 
+		}
+
+		li:hover {
+			@extend %widenavcolorhover;
+		}
+
+		.selected {
+			@extend %widenavcolorhover;
+		}
+	}
+
+	img {
+		margin-top: 20px;
+		max-width: 80%;
+	}
+
 }
 
 
@@ -40,6 +165,10 @@ ul {
 
 #top-wrap {
 	margin-bottom: 10px; 
+
+	@include landscapephone {
+		display: none;  
+	}
 }
 
 header {
@@ -52,21 +181,13 @@ header {
 	}
 
 	img {
-		width: 110px;
-		height: 110px;
-		border-radius: 15px; 
-		border: $gen-border;
-		@include margins(30px, 20px)
-		// margin-top: 30px;
-		// margin-bottom: 20px;
-		//transition: all 0.6s ease-in;  
-	}
+		@extend %myimage;
+		@include margins(30px, 20px) 
+		width: 70%; 
+		max-width: 300px;
+	} 
 
-	// img:hover {
-	// 	border-radius: 5px;
-	// } 
-
-	p:first-of-type {
+	p:first-of-type { 
 		padding-top: 20px;
 	} 
 
@@ -75,61 +196,21 @@ header {
 	}
 }
 
-nav {
-	position: relative; //needed to make drop-down hover
-	width: 100%; //needed to make drop-down hover
-	margin-bottom: 20px;
-
-	/*----------  Hamburger Menu  ----------*/
-	.hamburger {
-		cursor: pointer;
-		padding: 12px;
-		background-color: $hamburgerbg;
-		z-index: 100;
-		position: relative;
-		width: 100%; 
-
-		div {
-			border-bottom: $hamburger-style;
-			width: 35px;
-			margin-bottom: 6px;
-			margin-left: auto;
-			margin-right: auto; 
-		}
-		div:last-child {
-			margin-bottom: 0; 
-		}
-	}
-
-	/*----------  Nav list  ----------*/
-	ul {
-		z-index: 10; //needed to make drop-down hover
-		position: absolute; //needed to make drop-down hover
-		width: 100%; //needed to make drop-down hover
-		padding-top: 31px; // WAS 51 
-		transition: 1s; 
-	  
-
-		li { 
-			width: 100%;
-			background-color: $navbg;
-			border-top: $nav-border;
-
-			a {
-				display: block; 
-				padding: 12px;
-			}
-		}
-	}
-}
-
-
 /*====================================
 =            MAIN WIDGETS            =
 ====================================*/ 
 
+#main-wrap {
+	min-height: 100%; 
+
+	@include landscapephone {
+		max-height: 100vh;
+		overflow: auto;
+	}
+}
+
 .skills li {
-	background-color: $skills;
+	background-color: $skillsbg;
 	border-radius: 5px; 
 	border: $skills-border;
 	padding: 5px;
@@ -164,33 +245,49 @@ nav {
 		margin: 20px 0;
 	}
 
-	@include tablet {
-		max-width: 80%;
-		margin: 0 auto;
-	}
+	// @include largephone {
+
+	// 	margin: 0 auto;
+	// }
+
+	// img {
+	// 	display: none;
+	// 	@extend %myimage;
+	// 	// @include landscapephone {
+	// 	// 	display: inline;  
+	// 	// } 
+	// }
+
+	@include landscapephone {
+		width: 85%;
+	}	
 }
 
 /*----------  ABOUT WIDGET  ----------*/
 
-#about {
+#about { 
 
 	img {
-		margin-bottom: 15px;
+		@extend %myimage;
+		margin: 15px;
 		width: 200px;
 		height: 200px; 
-		border-radius: 5px;
-	}
+
+		@include landscapephone {
+			display: none;
+		} 
+	} 
 
 	.text {
-		background-color: $widget-bg;   
+		background-color: $about-bg;    
 		border-radius: 5px;
-		padding: 8px;
-		margin: 15px 5px;
+		padding: 20px;
+		margin: 15px; 
 		p {
 			margin-bottom: 15px;
-			background-color: rgba(187, 140, 212, 0.27);   
+			background-color: $widget-bg;   
 			border-radius: 5px;
-			padding: 5px;
+			padding: 10px;
 		}
 	}
 
@@ -198,19 +295,17 @@ nav {
 		margin-bottom: 10px;
 	}
 
-	@include tablet {
+	@include landscapephone {
 		max-width: 80%;
 		margin: 0 auto;
 	}
-
 }
 
 /*----------  PORTFOLIO  ----------*/
 
-
 #portfolio {
 
-	padding: 0 10px 20px 10px;
+	padding: 20px 10px; 
 
 	p {
 		margin-bottom: 25px;
@@ -218,53 +313,48 @@ nav {
 
 	h1 {
 		@include margins(12px, 12px)
-		// margin-top: 12px;
-		// margin-bottom: 12px; 
 	}
 
 	.thumb { 
 		@extend %widgetborders;
 		background-color: $widget-bg; 
-		margin: 20px 0; 
+		margin: 20px 0px; 
 		padding: 10px 5px;
 
-		@include tablet {
+		@include landscapephone {
 			padding: 10px;
-		}
+			max-width: 90%;
+			margin: 20px auto;
+		} 
 
 		p {
-			margin-bottom: 15px;
+			margin-bottom: 10px;
 		}
 
 		.thumb-container {
-			border: $img-border2;
+			border: $thumb-container-border;
 			margin-bottom: 12px; 
+			border-radius: 5px;
  
 			img {
-				border: $gen-border;
+				border: $img-border2;
+				border-radius: 5px;
 				width: 200px;
 				height: 200px;
 			}
 		}
+
 		.skill-wrap {
-			width: 80%;   
+			width: 85%;   
 
 			.skills {
 				@include margins(10px, 10px)
-				// margin-bottom: 10px;
-				// margin-top: 10px;
 				li {  
 					margin: 5px;
 				}
 			}  
 		} 
 	}
-
-	@include tablet {
-		max-width: 80%;
-		margin: 0 auto;
-	}
-
 }
 
 /*----------  TREEHOUSE WIDGET  ----------*/
@@ -382,26 +472,24 @@ $size-inner: $size-circle - $size-thickness * 2;
   }
 }
 
+
 /*----------  CONTACT WIDGET  ----------*/
 
-
 #contact {
-
 	padding: 0 20px;  	
+	width: 100%; 
 
-	@include tablet {
-		max-width: 80%;
+	@include largephone {
+		max-width: 85%;
 		margin: 0 auto;
 	}
 
-	.copy {
-		width: 100%;
-		position: fixed;
-		bottom: 0;
-		text-align: center;
-		background-color: $black;
-		border-top: 1px solid white; 
+	.copy { 
 		padding: 5px;
+
+		@include landscapephone {
+			display: none;
+		}
 	} 
 
 	.contactbox {
@@ -409,15 +497,19 @@ $size-inner: $size-circle - $size-thickness * 2;
 		background-color: $widget-bg; 
 		margin: 20px 0; 
 		padding: 10px 5px;
-
-		@include tablet {
-			max-width: 85%;
-			padding: 10px;
+		width: 100%; 
+ 
+		@include landscapephone {
+			max-width: 700px;
 		}
 
 		ul {
 			padding-left: 20px;
 			padding-right: 3px;
+
+			@include largetablet {
+				padding-right: 20px;
+			}
 
 			li { 
 				list-style-type: circle;
@@ -426,6 +518,24 @@ $size-inner: $size-circle - $size-thickness * 2;
 		}
 		h1 {
 			margin-bottom: 8px; 
+
+			@include largetablet {
+				margin-right: 20px;
+
+			}
+		}
+		.split {
+			.l-split {
+				@include largetablet {
+					margin-right: 20px;
+				}
+			}
+		} 
+
+		.leftalign {
+			@include largetablet {
+				width: 120px;
+			}
 		}
 	}
 
@@ -438,7 +548,7 @@ $size-inner: $size-circle - $size-thickness * 2;
 	    border-radius: 10px; 
 	    width: 50px;
 	    height: 50px;
-	    color: #FFFFFF;
+	    color: $contactbuttons;
 	    text-align: center;
 	    line-height: 50px;
 	   -webkit-transform: translate3d(0, 0, 0);
@@ -454,27 +564,22 @@ $size-inner: $size-circle - $size-thickness * 2;
 		margin-bottom: 70px;
 	}
 
-	// .githubcontact {
-	// 	margin-bottom: 40px;
-	// }
-
 	// ICON COLORS //
 
 	.green {
-	   background-color: #70CC72;
+	   background-color: $linkedin;
 	}
 
 	.lightblue {
-	   background-color: #62C2E4;
+	   background-color: $twitter;
 	}
 
 	.red {
-	   background-color: #FE4365;
+	   background-color: $google;
 	} 
 
-
 	.purple {
-	   background-color: #C49CDE;
+	   background-color: $github;
 	}
 
 	.green,
@@ -489,10 +594,9 @@ $size-inner: $size-circle - $size-thickness * 2;
 	.lightblue:hover,
 	.red:hover,
 	.purple:hover {
-	   color: $white;
+	   color: $black; 
 	   text-shadow: none;
 	}
-
 }
 
 /*==============================
@@ -500,8 +604,6 @@ $size-inner: $size-circle - $size-thickness * 2;
 ==============================*/
 
 footer {
-	background-color: $black;
-
 	ul {
 		margin-bottom: 15px; 
 		min-height: 30px;
@@ -509,10 +611,13 @@ footer {
 		li {
 			padding: 10px; 
 				img {
-					width: 30px;  
+					width: 30px;   
 					height: 30px;	
-				}
+				} 
 		}
+	}
+	@include landscapephone {
+		display: none;
 	}
 }
 

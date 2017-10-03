@@ -51,18 +51,42 @@
 		//And flex column on the body tag
 .content {
 	flex: 1 0 auto;
+	flex-direction: column;  //NEEDED FOR LEFT NAV
+
+	@include landscapephone { 
+		flex: 0 1 auto; //NEEDED FOR LEFT NAV 
+		flex-direction: row; //NEEDED FOR LEFT NAV
+	} 
 }  
+
+#left-column {
+	@include landscapephone {
+		display: flex;  
+	}
+}
 
 .contactbox {
 	@include largetablet {
-		width: 60%;
 		flex-direction: row; 
 		align-items: center;
+		justify-content: flex-start;; 
 	}
-	h1 {
+	.split {
 		@include largetablet {
-			margin-right: 20px;
-		}
+			flex-direction: row;
+			align-items: center;
+		} 
 	}
+}
 
+#home {
+	img {
+		@include landscapephone {
+			order: 99; 
+		} 
+	}
+}
+
+footer {
+	display: flex;
 }

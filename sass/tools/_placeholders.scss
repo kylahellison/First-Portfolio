@@ -1,3 +1,31 @@
+//MOBILE NAVIGATION
+%navcolor {
+	background-color: $hamburgerbg;
+	border-top: $nav-border;
+}
+
+%navstyle {
+	display: block; 
+	padding: 12px;
+}
+ 
+ //WIDE SCREEN NAVIGATION
+ %widenavcolor {
+	background-color: $leftmenubg;
+	border-top: $nav-border; 
+}
+%widenavcolorhover {
+	background-color: $bodybg;
+	border-top: $wide-nav-border; 
+}
+
+//IMAGE STYLE
+%myimage {
+	border-radius: 15px; 
+	border: $img-border2;  
+}
+
+//WIDGETS
 %widgetborders {
 	border-radius: 5px;
 	border: $widget-border; 
