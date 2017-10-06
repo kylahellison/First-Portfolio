@@ -51,6 +51,20 @@ ul {
 	}
 } 
 
+//INSET BOX SHADOW
+.shadow2 {
+   -moz-box-shadow:    inset 0 0 10px #fff;
+   -webkit-box-shadow: inset 0 0 10px #fff;
+   box-shadow:         inset 0 0 10px #fff;
+}
+
+//INSET BOX SHADOW
+.shadow1 {
+	-webkit-box-shadow: inset 0 0 12px 10px rgba(19,85,137,1);
+	-moz-box-shadow: inset 0 0 12px 10px rgba(19,85,137,1);
+	box-shadow: inset 0 0 12px 10px rgba(19,85,137,1);
+}
+
 
 
 /*=========================================
@@ -235,6 +249,7 @@ header {
 		   		-webkit-transform: rotateZ(-15deg)  scale(1.2); 
 	        	-ms-transform: rotateZ(-15deg)  scale(1.2); 
 		}
+
 	}
 
 	.welcome {
@@ -303,9 +318,32 @@ header {
 
 /*----------  PORTFOLIO  ----------*/
 
+.overlay{
+	 width:200px;
+	 height:200px;
+	 display:none; 
+	 position: absolute;
+	background-color: black;
+	top: 0;
+	opacity: 0.75;
+	z-index: 100;
+
+	p {
+		text-align: center;
+		padding: 5px;
+	}
+}
+
 #portfolio {
 
 	padding: 20px 10px; 
+
+		@include desktop {
+			flex-direction: row; 
+			flex-wrap: wrap;
+			justify-content: center;
+			min-width: 95%; 
+		}
 
 	p {
 		margin-bottom: 25px;
@@ -314,6 +352,7 @@ header {
 	h1 {
 		@include margins(12px, 12px)
 	}
+
 
 	.thumb { 
 		@extend %widgetborders;
@@ -326,6 +365,15 @@ header {
 			max-width: 90%;
 			margin: 20px auto;
 		} 
+		@include largetablet {
+			max-width: 75%;
+		}
+		@include desktop {
+			min-width: 455px; 
+			max-width: 80%;
+			padding: 0; 
+		}
+
 
 		p {
 			margin-bottom: 10px;
@@ -334,18 +382,20 @@ header {
 		.thumb-container {
 			border: $thumb-container-border;
 			margin-bottom: 12px; 
-			border-radius: 5px;
- 
-			img {
+			border-radius: 5px; 
+ 			
+
+			img {  
 				border: $img-border2;
 				border-radius: 5px;
 				width: 200px;
 				height: 200px;
 			}
+
 		}
 
 		.skill-wrap {
-			width: 85%;   
+			width: 85%;    
 
 			.skills {
 				@include margins(10px, 10px)
@@ -354,7 +404,25 @@ header {
 				}
 			}  
 		} 
+	} 
+
+
+
+	@include desktop {  //test
+		.thumb-container {
+			position: relative;
+		}
+		.thumb-container:hover .overlay {
+			display: flex; 
+			justify-content: center;
+			align-items: center;
+			z-index: 100;
+		} 
+		.hidelarge {
+			display: none;
+		}
 	}
+
 }
 
 /*----------  TREEHOUSE WIDGET  ----------*/
@@ -604,8 +672,10 @@ $size-inner: $size-circle - $size-thickness * 2;
 ==============================*/
 
 footer {
+	padding: 20px 0px 5px; 
+
 	ul {
-		margin-bottom: 15px; 
+		margin: 15px 0px 30px 0px;;
 		min-height: 30px;
 		max-height: 35px;
 		li {

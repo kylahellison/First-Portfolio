@@ -78,6 +78,16 @@ ul {
       min-height: 100%;
       margin-left: 50px; } }
 
+.shadow2 {
+  -moz-box-shadow: inset 0 0 10px #fff;
+  -webkit-box-shadow: inset 0 0 10px #fff;
+  box-shadow: inset 0 0 10px #fff; }
+
+.shadow1 {
+  -webkit-box-shadow: inset 0 0 12px 10px #135589;
+  -moz-box-shadow: inset 0 0 12px 10px #135589;
+  box-shadow: inset 0 0 12px 10px #135589; }
+
 /*=========================================
 =            MOBILE NAVIGATION            =
 =========================================*/
@@ -233,8 +243,27 @@ header {
     margin: 0 auto; } }
 
 /*----------  PORTFOLIO  ----------*/
+.overlay {
+  width: 200px;
+  height: 200px;
+  display: none;
+  position: absolute;
+  background-color: black;
+  top: 0;
+  opacity: 0.75;
+  z-index: 100; }
+  .overlay p {
+    text-align: center;
+    padding: 5px; }
+
 #portfolio {
   padding: 20px 10px; }
+  @media only screen and (min-width: 1280px) {
+    #portfolio {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      min-width: 95%; } }
   #portfolio p {
     margin-bottom: 25px; }
   #portfolio h1 {
@@ -249,6 +278,14 @@ header {
         padding: 10px;
         max-width: 90%;
         margin: 20px auto; } }
+    @media only screen and (min-width: 768px) {
+      #portfolio .thumb {
+        max-width: 75%; } }
+    @media only screen and (min-width: 1280px) {
+      #portfolio .thumb {
+        min-width: 455px;
+        max-width: 80%;
+        padding: 0; } }
     #portfolio .thumb p {
       margin-bottom: 10px; }
     #portfolio .thumb .thumb-container {
@@ -267,6 +304,16 @@ header {
         margin-bottom: 10px; }
         #portfolio .thumb .skill-wrap .skills li {
           margin: 5px; }
+  @media only screen and (min-width: 1280px) {
+    #portfolio .thumb-container {
+      position: relative; }
+    #portfolio .thumb-container:hover .overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100; }
+    #portfolio .hidelarge {
+      display: none; } }
 
 /*----------  TREEHOUSE WIDGET  ----------*/
 .group:after {
@@ -431,19 +478,20 @@ header {
 /*==============================
 =            FOOTER            =
 ==============================*/
-footer ul {
-  margin-bottom: 15px;
-  min-height: 30px;
-  max-height: 35px; }
-  footer ul li {
-    padding: 10px; }
-    footer ul li img {
-      width: 30px;
-      height: 30px; }
-
-@media only screen and (min-width: 568px) {
-  footer {
-    display: none; } }
+footer {
+  padding: 20px 0px 5px; }
+  footer ul {
+    margin: 15px 0px 30px 0px;
+    min-height: 30px;
+    max-height: 35px; }
+    footer ul li {
+      padding: 10px; }
+      footer ul li img {
+        width: 30px;
+        height: 30px; }
+  @media only screen and (min-width: 568px) {
+    footer {
+      display: none; } }
 
 /*==================================================
 =       DOCUMENT LEVEL FONT SIZEADJUSTMENTS        =
@@ -561,6 +609,10 @@ nav ul li a:hover {
 #portfolio p {
   color: #000;
   text-align: center; }
+
+#portfolio .overlay p {
+  font-size: 0.9rem;
+  color: #fff; }
 
 /*===============================
 =            CONTACT            =
