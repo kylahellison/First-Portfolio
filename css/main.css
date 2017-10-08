@@ -32,7 +32,7 @@
   background-color: #f9fbfc;
   border-top: 2px solid #042e4f; }
 
-header img, #about img {
+#left-column img, header img, #about img {
   border-radius: 15px;
   border: 3px solid #000; }
 
@@ -130,6 +130,8 @@ ul {
     transition: 1s; }
     .mobile-nav ul li {
       width: 100%; }
+  .mobile-nav ul:last-child {
+    border-bottom: 2px solid #fff; }
 
 /*=======================================
 =            LEFT NAVIGATION            =
@@ -140,11 +142,18 @@ ul {
   min-height: 100%;
   min-width: 200px;
   max-width: 220px; }
+  #left-column h1 {
+    margin-top: 15px;
+    margin-bottom: 20px; }
   #left-column .wide-nav {
     width: 100%;
-    margin-top: 50px; }
+    margin-top: 40px; }
     #left-column .wide-nav li:last-child {
       border-bottom: 2px solid #fff; }
+    #left-column .wide-nav li:hover a {
+      color: #042e4f; }
+    #left-column .wide-nav .selected a {
+      color: #042e4f; }
   #left-column img {
     margin-top: 20px;
     max-width: 80%; }
@@ -164,6 +173,8 @@ header {
   header h3,
   header p {
     display: inline; }
+  header h1 {
+    margin-top: 15px; }
   header img {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -178,11 +189,12 @@ header {
 =            MAIN WIDGETS            =
 ====================================*/
 #main-wrap {
-  min-height: 100%; }
-  @media only screen and (min-width: 568px) {
+  min-height: 100vh; }
+  @media only screen and (min-width: 768px) {
     #main-wrap {
-      max-height: 100vh;
-      overflow: auto; } }
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
 
 .skills li {
   background-color: #135589;
@@ -233,6 +245,10 @@ header {
     background-color: #042e4f;
     border-radius: 5px;
     padding: 10px; }
+    #about .text p a {
+      color: #3DDAD7; }
+    #about .text p a:hover {
+      color: #2A93D5; }
 
 #about h3 {
   margin-bottom: 10px; }
@@ -424,6 +440,10 @@ header {
       #contact .contactbox ul li {
         list-style-type: circle;
         padding: 5px 0; }
+        #contact .contactbox ul li a {
+          color: #3DDAD7; }
+        #contact .contactbox ul li a:hover {
+          color: #2A93D5; }
     #contact .contactbox h1 {
       margin-bottom: 8px; }
       @media only screen and (min-width: 768px) {
@@ -547,11 +567,14 @@ h2 {
   text-align: center; }
 
 #left-column h1 {
-  font-size: 2.1rem; }
+  font-size: 2.1rem;
+  color: rgba(155, 205, 255, 0.6);
+  text-shadow: 3px 3px 4px rgba(88, 166, 244, 0.4); }
 
 #left-column h3,
 #left-column p {
-  font-size: 1rem; }
+  font-size: 1rem;
+  color: #fff; }
 
 /*==================================
 =            NAVIGATION            =
@@ -642,7 +665,13 @@ nav ul li a:hover {
 =            TOP WRAP            =
 ================================*/
 #head h1 {
-  font-weight: 700; }
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 3px 3px 4px rgba(42, 147, 213, 0.7); }
+
+@media only screen and (min-width: 768px) {
+  #head p {
+    color: #fff; } }
 
 #home h2 {
   font-weight: 400; }

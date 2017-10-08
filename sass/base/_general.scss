@@ -126,6 +126,9 @@ ul {
 			}
 		}
 	}
+	ul:last-child {
+		border-bottom: $nav-border
+	}
 }
 
 
@@ -140,9 +143,14 @@ ul {
 	min-width: 200px; 
 	max-width: 220px; 
 
+	h1 {
+		margin-top: 15px;
+		margin-bottom: 20px;
+	}
+
 	.wide-nav { 
 		width: 100%;
-		margin-top: 50px;
+		margin-top: 40px;
 
 		li { 
 			@extend %widenavcolor;
@@ -158,16 +166,23 @@ ul {
 
 		li:hover {
 			@extend %widenavcolorhover;
+			a {
+				color: $navhovertxt;
+			}
 		}
 
 		.selected {
 			@extend %widenavcolorhover;
+			a {
+				color: $navhovertxt;
+			}
 		}
 	}
 
 	img {
+		@extend %myimage;
 		margin-top: 20px;
-		max-width: 80%;
+		max-width: 80%; 
 	}
 
 }
@@ -194,6 +209,10 @@ header {
 		display: inline;
 	}
 
+	h1 {
+		margin-top: 15px; 
+	}
+
 	img {
 		@extend %myimage;
 		@include margins(30px, 20px) 
@@ -215,11 +234,17 @@ header {
 ====================================*/ 
 
 #main-wrap {
-	min-height: 100%; 
+	min-height: 100vh; 
 
-	@include landscapephone {
-		max-height: 100vh;
-		overflow: auto;
+	// @include landscapephone {
+	// 	max-height: 100vh;
+	// 	overflow: auto;
+	// }
+
+	@include largetablet {
+		display: flex;
+		align-items: center;  
+		justify-content: center;  
 	}
 }
 
@@ -230,6 +255,20 @@ header {
 	padding: 5px;
 	margin: 10px;
 }
+
+// #wrap-wrap { 
+
+// 	@include largetablet {
+// 		max-height: 90%;
+// 		overflow: auto;
+// 	}
+
+// 	// @include largetablet {
+// 	// 	display: flex;
+// 	// 	align-items: center;  
+// 	// 	justify-content: center;  
+// 	// }
+// }
 
 /*----------  HOME WIDGET  ----------*/
 
@@ -260,22 +299,10 @@ header {
 		margin: 20px 0;
 	}
 
-	// @include largephone {
-
-	// 	margin: 0 auto;
-	// }
-
-	// img {
-	// 	display: none;
-	// 	@extend %myimage;
-	// 	// @include landscapephone {
-	// 	// 	display: inline;  
-	// 	// } 
-	// }
-
 	@include landscapephone {
 		width: 85%;
 	}	
+
 }
 
 /*----------  ABOUT WIDGET  ----------*/
@@ -303,6 +330,13 @@ header {
 			background-color: $widget-bg;   
 			border-radius: 5px;
 			padding: 10px;
+
+			a {
+				color: $navtxt;
+			}
+			a:hover {
+				color: $navtxthover;
+			}
 		}
 	}
 
@@ -582,6 +616,13 @@ $size-inner: $size-circle - $size-thickness * 2;
 			li { 
 				list-style-type: circle;
 				padding: 5px 0;
+
+				a {
+					color: $navtxt;
+				}
+				a:hover {
+					color: $navtxthover;
+				}
 			}
 		}
 		h1 {
